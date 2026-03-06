@@ -13,11 +13,82 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
+    <!-- Css link -->
+    <link rel="stylesheet" href="./style.css">
+
     <!-- DaisyUl CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
+    <header class="bg-white border-b border-gray-200">
+        <nav class="flex flex-col md:flex-row items-center justify-between px-6 py-4 space-y-4 md:space-y-0">
+            <!-- Images and Title name | left part-->
+            <div class="flex items-center space-x-2">
+                <img class="w-8 h-8" src="./assets/github-logo.png" alt="Logo">
+                <h1 class="font-bold text-lg text-[#1F2937] tracking-tight">GitHub Issues Tracker</h1>
+            </div>
+            
+            <!-- Search Part | right part -->
+            <div class="flex items-center space-x-4 md:w-auto">
+                <div class=" md:w-80">
+                    <label class="input">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g
+                        stroke-linejoin="round"
+                        stroke-linecap="round"
+                        stroke-width="2.5"
+                        fill="none"
+                        stroke="currentColor"
+                        >
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                    <input type="search" required placeholder="Search issues..." />
+                    </label>
+                </div>
+                    <button id="newIssueBtn" class="btn bg-[#4A00FF] hover:bg-[#3b00cc] text-white px-5 py-2 rounded-lg text-sm font-semibold flex items-center transition-colors">
+                        <i class="fa-solid fa-plus"></i> New Issue
+                    </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="min-h-[calc(100vh-80px)] bg-[#F8FAFC] p-4 md:px-8 md:py-10">
+    <div class="max-w-7xl mx-auto ">
         
+        <div class="flex bg-white rounded-lg w-full p-6 shadow-sm gap-3">
+            <button class="cursor-pointer px-10 py-2.5 bg-[#4A00FF] hover:bg-[#3D00D1] text-white rounded-md text-sm font-medium">All</button>
+            <button class="cursor-pointer px-8 py-2 text-gray-600 hover:bg-gray-50 rounded-md text-sm font-medium transition-all border-[1.5px] border-gray-300">Open</button>
+            <button class="cursor-pointer px-8 py-2 text-gray-600 hover:bg-gray-50 rounded-md text-sm font-medium transition-all border-[1.5px] border-gray-300">Closed</button>
+        </div>
+
+        <div class="bg-white p-6 rounded-t-lg border border-gray-200 border-b-0 shadow-sm mt-5">
+            <div class="flex flex-col md:flex-row md:items-center justify-between ">
+                <div class="flex items-center space-x-2">
+                    <div class="bg-[#F0E7FF] p-2.5 rounded-full">
+                        <img class="w-8 h-8 object-contain" src="./assets/Aperture.png" alt="Issue Icon">
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-semibold text-[#1F2937] leading-none">50 Issues</h2>
+                        <p class="text-[#64748B] text-sm mt-1">Track and manage your project issues</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-5 text-sm font-medium">
+                    <span class="flex items-center gap-2 ">
+                        <span class="w-2.5 h-2.5 bg-[#00A96E] rounded-full"></span> Open
+                    </span>
+                    <span class="flex items-center gap-2 ">
+                        <span class="w-2.5 h-2.5 bg-[#A855F7] rounded-full"></span> Closed
+                    </span>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+</main>
 </body>
 </html>
