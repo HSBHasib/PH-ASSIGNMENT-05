@@ -1,10 +1,13 @@
-// Select all the necessary element
+// Select all the necessary Element
 const allButton = document.getElementById('allBtn');
 const openButton = document.getElementById('openBtn');
 const closedButton = document.getElementById('closedBtn');
 const cardContainer = document.getElementById('card-container');
 const issuesCount = document.getElementById('issuesCount');
 const loading = document.getElementById('loading');
+
+// For Filtering Cards
+let allIssues = [];
 
 // 1. Data load kora
 const loadIssues = async () => {
@@ -24,6 +27,8 @@ function showLoader() {
 function hideLoader() {
     loading.classList.add('hidden');
 }
+
+
 
 //Card Display
 const displayCards = (dets) => {
@@ -71,6 +76,32 @@ const displayCards = (dets) => {
 
         cardContainer.append(div);
     });
+};
+
+const filterIssues = (status, activeBtn) => {
+    // remove from all the btn 'active style'
+    [allButton, openButton, closedButton].forEach(btn => {
+        btn.classList.remove('bg-[#4A00FF]', 'text-white');
+        btn.classList.add('text-gray-600', 'border-gray-300', 'border-[1.5px]', 'border-gray-300');
+    });
+
+    // add active class style on click btn
+    activeBtn.classList.add('bg-[#4A00FF]', 'text-white');
+    activeBtn.classList.remove('text-gray-600', 'border-gray-300');
+
+    // Filtering the data
+    const filtered = status === 'all' ? allIssues : allIssues.filter(item => item.status.toLowerCase() === status);
+    displayCards(filtered);
+    displayIssuesCount(filtered);
+};
+
+// 4. Events
+allButton.addEventListener('click', () => filterIssues('all', allButton));
+openButton.addEventListener('click', () => filterIssues('open', openButton));
+closedButton.addEventListener('click', () => filterIssues('closed', closedButton));
+
+const displayIssuesCount = (dets) => {
+    issuesCount.textContent = dets.length;
 };
 
 loadIssues();
