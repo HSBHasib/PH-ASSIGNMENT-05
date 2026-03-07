@@ -30,7 +30,7 @@ function hideLoader() {
     loading.classList.add('hidden');
 }
 
-// Filter by clicking button using API
+//2. Filter by clicking button using API
 const handleSearchInput = async () => {
 
     const searchText = searchInput.value.trim();
@@ -64,7 +64,7 @@ function displayCardClickingBybutton(searchResults) {
     }
 }
 
-// Search Button
+//Search Button
 searchBtn.addEventListener('click', handleSearchInput);
 
 // This code works when user just input somotime and click enter btn
@@ -74,7 +74,7 @@ searchInput.addEventListener('keydown', (e) => {
     }
 });
 
-//Card Display
+//3. Card Display
 const displayCards = (dets) => {
     cardContainer.innerHTML = "";
 
@@ -109,7 +109,7 @@ const displayCards = (dets) => {
                     
                     <div class="flex flex-wrap gap-2 pt-2">
                         ${elem.labels.map(label => `
-                            <span class="px-2 py-1 text-[12px] font-bold rounded-full border uppercase 
+                            <span class="px-2 py-1 text-[9px] font-bold rounded-full border uppercase 
                                 ${label.toLowerCase() === 'bug' ? 'bg-[#FFF1F2] text-[#E11D48] border-[#FFE4E6]' : 'bg-[#FFFBEB] text-[#D97706] border-[#FEF3C7]'}"> 
                                 <i class="fa-solid ${label.toLowerCase() === 'bug' ? 'fa-robot' : 'fa-life-ring'} mr-1"></i> 
                                 ${label}
@@ -154,7 +154,7 @@ const displayIssuesCount = (dets) => {
 };
 
 
-// Function to load single issue and show in modal
+//5. Function to load single issue and show in modal
 const loadSingleIssue = async (id) => {
     const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`);
     const data = await res.json();
