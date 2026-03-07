@@ -9,8 +9,6 @@ const inputValidation = () => {
     let enteredPass = pass.value;
 
     // Remove Previous input field text
-    userName.value = "";
-    pass.value = "";
 
     // Default UserName and Password
     const correctUser = "admin";
@@ -27,6 +25,9 @@ const inputValidation = () => {
         alert("Incorrect Password! Please check again.");
     } 
     else {
+        // Remove Previous input field text
+        userName.value = "";
+        pass.value = "";
         alert("Welcome Admin.");
         window.location.href = "home.html"; 
     }
