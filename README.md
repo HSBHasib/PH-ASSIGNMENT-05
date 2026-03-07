@@ -10,3 +10,12 @@
 • const is also block-scoped, but it cannot be reassigned after declaration.
 ```
 
+## 2. What is the spread operator (...)?
+```js
+  ↪ The spread operator (...) expands elements of an array or properties of an object, and it is also used for copying or merging data.
+
+• We usually use spread operator for-
+   copying arrays or objects
+   merging arrays or objects
+   passing elements individually
+```
