@@ -20,13 +20,28 @@
    passing elements individually
 ```
 
-## 2. What is the difference between map(), filter(), and forEach()?
+## 3. What is the difference between map(), filter(), and forEach()?
 ```js
   ↪ These 3 methods used to iterate over arrays.
 
   • map() is used to transform each element and it must returns a new array.
   • filter() is used to select elements based on a condition and also returns a new array.
   • forEach() is simply go on each element but does not return anything.
+```
+
+## 4. What is an arrow function?
+```js
+  ↪ An arrow function is a shorter syntax for writing functions introduced in ES6.
+    It makes the code cleaner and does not have its own 'this' instead, it inherits this from the lexical scope.
+
+  Example:
+  • Regular function -
+    function abc() {
+      //code
+    };
+
+  • Arrow Fuction -
+   const add = (a, b) => a + b;
 ```
 
 
