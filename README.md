@@ -1,6 +1,6 @@
 # PH-ASSIGNMENT-05
 
-## 1. What is the difference between var, let, and const?
+### 1. What is the difference between var, let, and const?
 ```js
   ↪ var, let, and const are used to declare variables in JavaScript.
   The main difference is their scope and reassignment behavior.
@@ -10,7 +10,7 @@
 • const is also block-scoped, but it cannot be reassigned after declaration.
 ```
 
-## 2. What is the spread operator (...)?
+### 2. What is the spread operator (...)?
 ```js
   ↪ The spread operator (...) expands elements of an array or properties of an object, and it is also used for copying or merging data.
 
@@ -20,7 +20,7 @@
    passing elements individually
 ```
 
-## 3. What is the difference between map(), filter(), and forEach()?
+### 3. What is the difference between map(), filter(), and forEach()?
 ```js
   ↪ These 3 methods used to iterate over arrays.
 
@@ -29,7 +29,7 @@
   • forEach() is simply go on each element but does not return anything.
 ```
 
-## 4. What is an arrow function?
+### 4. What is an arrow function?
 ```js
   ↪ An arrow function is a shorter syntax for writing functions introduced in ES6.
     It makes the code cleaner and does not have its own 'this' instead, it inherits this from the lexical scope.
@@ -44,7 +44,7 @@
    const add = (a, b) => a + b;
 ```
 
-## 5. What are template literals?
+### 5. What are template literals?
 ```js
  ↪ Template literals are a way to create strings using backticks `` in JavaScript.
 
