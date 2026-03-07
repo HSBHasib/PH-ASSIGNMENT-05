@@ -68,7 +68,7 @@ function displayCardClickingBybutton(searchResults) {
 searchBtn.addEventListener('click', handleSearchInput);
 
 // This code works when user just input somotime and click enter btn
-searchInput.addEventListener('keydown', (elem) => {
+searchInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         handleSearchInput();
     }
@@ -159,7 +159,7 @@ const loadSingleIssue = async (id) => {
     const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`);
     const data = await res.json();
     displayModal(data.data)
-    
+
     const modal = document.getElementById('my_modal_5');
     modal.showModal();
 };
