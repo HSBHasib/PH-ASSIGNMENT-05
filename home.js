@@ -46,7 +46,7 @@ const displayCards = (dets) => {
                 <div class="group border border-gray-100 rounded-t-lg p-5 space-y-2 flex-grow">                
                     <div class="flex justify-between items-start">
                         <div class="rounded-full">
-                            <img src="${elem.status.toLowerCase() === 'open' ? './assets/Open-Status.png' : './assets/Closed-Status.png'}" alt="">
+                            <img src="${elem.status.toLowerCase() === 'open' ? './assets/Open-Status.png' : './assets/closed-status.png'}" alt="${elem.status}-img">
                         </div>
                         <span class="tracking-wide px-7 py-1 border text-[13px] font-medium rounded-full uppercase 
                             ${elem.priority.toUpperCase() === 'HIGH' ? 'bg-red-50 text-red-600 border-red-100' : 
