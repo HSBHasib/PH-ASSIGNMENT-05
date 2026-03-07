@@ -44,4 +44,11 @@
    const add = (a, b) => a + b;
 ```
 
+## 5. What are template literals?
+```js
+ ↪ Template literals are a way to create strings using backticks `` in JavaScript.
+
+  • If we use template literals, we can write multi-line strings and also embed variables inside a string as values. We can even perform calculations or print any               expression inside ${}
+```
+
 
