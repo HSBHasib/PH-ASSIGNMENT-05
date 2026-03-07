@@ -19,3 +19,14 @@
    merging arrays or objects
    passing elements individually
 ```
+
+## 2. What is the difference between map(), filter(), and forEach()?
+```js
+  ↪ These 3 methods used to iterate over arrays.
+
+  • map() is used to transform each element and it must returns a new array.
+  • filter() is used to select elements based on a condition and also returns a new array.
+  • forEach() is simply go on each element but does not return anything.
+```
+
+
