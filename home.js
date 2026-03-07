@@ -8,14 +8,22 @@ const loading = document.getElementById('loading');
 
 // 1. Data load kora
 const loadIssues = async () => {
+    showLoader();
     let res = await fetch('https://phi-lab-server.vercel.app/api/v1/lab/issues');
     let data = await res.json();
     allIssues = data.data;
+    hideLoader();
     displayIssuesCount(allIssues);
     displayCards(allIssues);
 };
 
+function showLoader() {
+    loading.classList.remove('hidden');
+}
 
+function hideLoader() {
+    loading.classList.add('hidden');
+}
 
 //Card Display
 const displayCards = (dets) => {
